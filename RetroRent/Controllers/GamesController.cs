@@ -4,20 +4,20 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using RetroRent.Models;
-//using RetroRent.ViewModels;
+
 
 namespace RetroRent.Controllers
 {
     public class GamesController : Controller
     {
-       
-        public ActionResult Index()
+
+        public ViewResult Index()
         {
             var game = GetGames();
 
             return View(game);
         }
-        
+
         private IEnumerable<Game> GetGames()
         {
             return new List<Game>
@@ -28,9 +28,9 @@ namespace RetroRent.Controllers
                 new Game { ID = 2, Name = "Punch Out",Platform="NES" }
 
             };
-        } 
+        }
 
-          
-      
+
+
     }
 }

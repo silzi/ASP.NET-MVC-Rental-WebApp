@@ -4,17 +4,18 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using RetroRent.Models;
-using RetroRent.ViewModels;
+
 
 namespace RetroRent.Controllers
 {
     public class CustomersController : Controller
     {
-        // GET: Customers
+
         public ViewResult Index()
         {
             var customers = GetCustomers();
-            return View();
+
+            return View(customers);
         }
 
         public ActionResult Details(int id)
